@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { logoutAction } from "../login/actions";
 import type { User } from "../../lib/types";
 
@@ -16,7 +13,6 @@ const LINKS = [
 ] as const;
 
 export function AppNav({ user }: { user: User }) {
-  const path = usePathname();
   return (
     <>
       <nav className="top">
@@ -35,7 +31,7 @@ export function AppNav({ user }: { user: User }) {
       <div className="wrap">
         <nav className="subnav">
           {LINKS.map(([href, label]) => (
-            <Link key={href} href={href} className={path === href ? "active" : undefined}>
+            <Link key={href} href={href}>
               {label}
             </Link>
           ))}
