@@ -1,0 +1,26 @@
+# Keep image builds free of secrets, tenant data, and local junk.
+.git
+.gitignore
+.gitattributes
+.env
+.env.*
+!.env.example
+data/
+*.sqlite
+*.pem
+*.key
+node_modules
+.next
+out
+dist
+coverage
+playwright-report
+test-results
+docs
+*.md
+.vscode
+.idea
+.cursor
+.DS_Store
+docker-compose*.yml
+compose*.yaml
