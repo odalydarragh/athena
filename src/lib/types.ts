@@ -107,3 +107,14 @@ export const DISCLAIMER =
 
 export const SIGNATURE_MEANING =
   "I have reviewed this compiled technical file. I am authorised to approve it for internal use. DocuMDR is not a Notified Body.";
+
+export type TechnicalFile = {
+  disclaimer: string;
+  organizationId: string;
+  headSha: string | null;
+  matrix: MatrixRow[];
+  fmea: RiskRow[];
+  gspr: GsprRow[];
+  annexIv?: AnnexIvFile;
+  signatures: Signature[];
+};
