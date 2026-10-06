@@ -100,23 +100,6 @@ describe("verifyRiskControl", () => {
 
 describe("rpn", () => {
   it("multiplies S P D", () => {
-    expect(
-      rpn({
-        id: "RISK-01",
-        hazard: "",
-        sequence: "",
-        harm: "",
-        severity: 5,
-        probability: 2,
-        detectability: 4,
-        rpn: 0,
-        linkedItemIds: [],
-        controls: [],
-        controlsVerified: false,
-        changePrompt: false,
-        probabilityBumpShas: [],
-        paths: [],
-      }),
-    ).toBe(40);
+    expect(rpn({ severity: 5, probability: 2, detectability: 4 })).toBe(40);
   });
 });
